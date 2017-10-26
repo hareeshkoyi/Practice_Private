@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.ig.entities">
+	<class name="Appointment" table="APPOINTMENT">
+		<id name="appointmentNo" column="APPOINTMENT_NO">
+			<generator class="select">
+				<param name="key">patientName</param>
+			</generator>
+		</id>
+		<property name="appointmentDate" column="APPOINTMENT_DATE" />
+		<property name="doctor" column="DOCTOR" />
+		<property name="patientName" column="PATIENT_NM" />
+		<property name="comments" column="COMMENTS" />
+		<property name="status" column="STATUS" />
+	</class>
+</hibernate-mapping>

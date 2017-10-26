@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.fh.entities.Project" table="PROJECT">
+		<id name="projectNo" column="PROJECT_NO" />
+		<property name="title" column="TITLE" />
+		<property name="description" column="DESCR" />
+		<property name="domain" column="DOMAIN" />
+		<property name="duration" column="DURATION" />
+		<property name="clientName" column="CLIENT_NM" />
+		<property name="status" column="STATUS" />
+	</class>
+</hibernate-mapping>

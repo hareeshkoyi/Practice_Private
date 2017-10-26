@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.flc.entities">
+	<class name="Product" table="PRODUCTS">
+		<id name="productId" column="PRODUCT_ID">
+			<generator class="increment"/>
+		</id>
+		<property name="productName" column="PRODUCT_NM" />
+		<property name="description" column="DESCR" />
+		<property name="merchantName" column="MERCHANT_NM" />
+		<property name="price" column="PRICE" />
+	</class>
+</hibernate-mapping>

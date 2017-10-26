@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.ht.entities">
+	<class name="Task" table="TASK">
+		<id name="taskId" column="TASK_ID" />
+		<property name="title" type="string">
+			<column name="TITLE" not-null="true" unique="true" />
+		</property>
+		<property name="description" type="string">
+			<column name="DESCR" not-null="false" />
+		</property>
+		<property name="duration" type="int">
+			<column name="DURATION" not-null="true" />
+		</property>
+		<property name="assignedTo" type="string" column="ASSIGNED_TO" />
+		<property name="status" type="string">
+			<column name="TASK_STATUS" not-null="true" />
+		</property>
+		<property name="assignedBy" type="string" column="ASSIGNED_BY" />
+		
+	</class>
+</hibernate-mapping>
+
+
+
+
+
