@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.otmm.entities">
+	<class name="Cargo" table="CARGO">
+		<id name="cargoNo" column="CARGO_NO">
+			<generator class="increment" />
+		</id>
+		<property name="cargoName" column="CARGO_NM" />
+		<property name="cargoType" column="CARGO_TYPE" />
+		<property name="capacity" column="CAPACITY" />
+		<map name="loads">
+			<key column="CARGO_NO" />
+			<map-key column="SHIPMENT_NO" type="java.lang.String"/>
+			<one-to-many class="Load" />
+		</map>
+	</class>
+</hibernate-mapping>

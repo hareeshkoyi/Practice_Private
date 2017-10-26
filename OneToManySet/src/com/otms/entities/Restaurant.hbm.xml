@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.otms.entities">
+	<class name="Restaurant" table="RESTAURANT">
+		<id name="restaurantNo" column="RESTAURANT_NO">
+			<generator class="increment" />
+		</id>
+		<property name="restaurantName" column="RES_NM" />
+		<property name="location" column="LOCATION" />
+		<property name="contactNo" column="CONTACT_NO" />
+		<property name="emailAddress" column="EMAIL_ADDR" />
+		<property name="restaurantType" column="RES_TYPE" />
+		<set name="reviews" cascade="save-update,delete-orphan" inverse="true">
+			<key column="REVIEWED_RESTAURANT_NO" not-null="true" />
+			<one-to-many class="Review" />
+		</set>
+	</class>
+	<query name="getAllRestaurants">select r from Restaurant r</query>
+</hibernate-mapping>
+
+
+
+
+
+
+
+
+
+

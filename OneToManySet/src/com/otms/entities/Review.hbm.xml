@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.otms.entities">
+	<class name="Review" table="REVIEWS">
+		<id name="reviewNo" column="REVIEW_NO">
+			<generator class="increment" />
+		</id>
+		<property name="comments" column="REVIEW_COMMENTS" />
+		<property name="rating" column="RATING" />
+		<property name="reviewBy" column="REVIEW_BY" />
+		<property name="reviewDate" column="REVIEW_DT" />
+		<many-to-one name="restaurant" column="REVIEWED_RESTAURANT_NO"
+			class="Restaurant" not-null="true" />
+	</class>
+</hibernate-mapping>
+
+
+
+

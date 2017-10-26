@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.otml.entities">
+	<class name="Technician" table="TECHNICIAN">
+		<id name="technicianNo" column="TECHNICIAN_NO">
+			<generator class="increment" />
+		</id>
+		<property name="name" column="TECHNICIAN_NM" />
+		<property name="designation" column="DESIGN" />
+		<property name="contactNo" column="CONTACT_NO" />
+		<property name="emailAddress" column="EMAIL_ADDR" />
+		<list name="serviceRequests">
+			<key column="ASSIGNED_TECHNICIAN_NO" />
+			<list-index column="SR_ASSIGNED_ORDER" base="1"/>
+			<one-to-many class="ServiceRequest" />
+		</list>
+	</class>
+</hibernate-mapping>
+
+
+
+
+
+
+
+
+

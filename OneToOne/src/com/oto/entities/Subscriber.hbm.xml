@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.oto.entities">
+	<class name="Subscriber" table="SUBSCRIBER">
+		<id name="subscriberNo" column="SUBSCRIBER_NO">
+			<generator class="increment" />
+		</id>
+		<property name="subscriberName" column="SUBSCRIBER_NM" />
+		<property name="subscriptionDate" column="SUBSCRIPTION_DT" />
+		<property name="mobileNo" column="MOBILE_NO" />
+		<property name="plan" column="PLAN" />
+		<property name="networkType" column="NETWORK_TYPE" />
+	</class>
+</hibernate-mapping>
+
+
+
+
+
+

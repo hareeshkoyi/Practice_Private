@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.otmm.entities">
+	<class name="Load" table="LOAD">
+		<id name="loadNo" column="LOAD_NO">
+			<generator class="increment" />
+		</id>
+		<property name="description" column="LOAD_DESCR" />
+		<property name="loadDate" column="LOAD_DATE" />
+		<property name="owner" column="OWNER" />
+		<property name="weight" column="WEIGHT" />
+	</class>
+</hibernate-mapping>
