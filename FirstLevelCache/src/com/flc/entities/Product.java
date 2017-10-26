@@ -1,5 +1,7 @@
 package com.flc.entities;
 
+// This Is a Java Program
+
 public class Product {
 	private int productId;
 	private String productName;
